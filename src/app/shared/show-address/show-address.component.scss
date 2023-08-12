@@ -1,0 +1,25 @@
+.virgo-space {
+  margin-left: -3px;
+  margin-right: 3px;
+}
+
+address {
+  span{
+    display: inline-block !important;
+    &:before {
+      content: ',';
+    }
+    &:first-child {
+      margin-left: 0 !important;
+      &:before {
+        content: '';
+      }
+    }
+  }
+  .no-virgo {
+    margin-left: 0 !important;
+    &:before {
+      content: '' !important;
+    }
+  }
+}

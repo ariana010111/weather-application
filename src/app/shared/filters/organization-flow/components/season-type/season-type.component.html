@@ -1,0 +1,33 @@
+<form [formGroup]="formGroup">
+  <div class="grid">
+    <div class="col-12 my-2">
+         <span class="p-float-label">
+           <p-dropdown optionLabel="label"
+                       class="dropdown-filter"
+                       formControlName="semester"
+                       optionValue="value"
+                       id="season"
+                       [autoDisplayFirst]="true"
+                       [options]="season"
+           ></p-dropdown>
+           <label for="season">Season type</label>
+         </span>
+    </div>
+    <div class="col-12 mb-2">
+         <span class="p-float-label">
+           <p-dropdown
+             class="dropdown-filter"
+             formControlName="year"
+             id="year"
+             optionValue="value"
+             optionLabel="label"
+             [autoDisplayFirst]="true"
+             [options]="year"
+           ></p-dropdown>
+           <label for="year">Year</label>
+         </span>
+    </div>
+
+  </div>
+</form>
+

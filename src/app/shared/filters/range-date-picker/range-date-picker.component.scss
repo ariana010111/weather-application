@@ -1,0 +1,49 @@
+ul {
+  list-style-type: none;
+  margin: 10px 0 0 0;
+  padding: 0;
+
+  li {
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  li:hover {
+    background: rgb(247 247 247);
+  }
+}
+
+.group-filters {
+  border-radius: 11px;
+  background-color: #e9eefd;
+  //background-color: #f5f7fd;
+}
+.field-checkbox, .field-radiobutton {
+  padding: .5rem;
+  &:hover {
+    background:rgba(0, 0, 0, 0.04);
+  }
+  &.highlight-date {
+    color: #3F51B5;
+    background: rgba(63, 81, 181, 0.12);
+  }
+}
+
+.info-style {
+  font-size: 14px;
+  display: inline-block;
+  margin: 5px 5px 0;
+  cursor: pointer;
+}
+.normal-width{
+  width: calc(100% - 95vw);
+}
+.custom-width{
+  width: calc(100% - 90vw);
+}
+.clear-link {
+  display: inline-block;
+  color: #007BFF;
+  cursor: pointer;
+  margin: 0 0 6px 8px;
+}

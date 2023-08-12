@@ -1,0 +1,18 @@
+<address class="sub-title text-ellipsis">
+               <span class="virgo-space" *ngIf="address.streetNumber">
+                  {{address.streetNumber}}
+                </span>
+  <span class="virgo-space"
+        *ngIf="address.street"> {{address.street}}</span>
+  <span class="virgo-space"
+        *ngIf="address.city;else noCity"> {{address.city}}</span>
+  <ng-template #noCity>
+              <span class="virgo-space"
+                    *ngIf="address.county"> {{address.county}}</span>
+  </ng-template>
+  <span class="virgo-space"
+        *ngIf="address.state?.code"> {{address.state.code}}</span>
+  <span class="virgo-space" *ngIf="address.zip"> {{address.zip}}</span>
+  <span class="virgo-space"
+        *ngIf="address.country"> {{address.country}}</span>
+</address>

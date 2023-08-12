@@ -1,0 +1,30 @@
+<div class="w-100" app-editable>
+  <form [formGroup]="formGroup">
+    <ng-template appViewMode>
+      <div class="group-filters">
+        <p class="info-style">Instructor status:</p>
+
+        <div class="info-style font-bold">
+          <span appEllipsis [styleName]="'filtersBox'">{{formGroup.get('status').value.label}}</span>
+
+        </div>
+      </div>
+    </ng-template>
+    <ng-template appEditMode>
+      <div class=" mx-2 grid single-input-width">
+        <div class="col-12 group-filters">
+              <span class="p-float-label">
+            <p-dropdown id="status"
+                        class="dropdown-filter"
+                        [autoDisplayFirst]="false"
+                        optionLabel="label"
+                        formControlName="status"
+                        [options]="statusList"
+            ></p-dropdown>
+                   <label for="status">Instructor status</label>
+              </span>
+        </div>
+      </div>
+    </ng-template>
+  </form>
+</div>

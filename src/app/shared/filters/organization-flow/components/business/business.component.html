@@ -1,0 +1,55 @@
+<form [formGroup]="formGroup">
+  <div class="grid">
+    <div class="col-12 mb-2">
+         <span class="p-float-label">
+           <p-dropdown optionLabel="label"
+                       class="dropdown-filter"
+                       formControlName="businessType"
+                       optionValue="value"
+                       (onChange)="onChangeBusiness()"
+                       id="organization"
+                       [options]="businessType"
+           ></p-dropdown>
+           <label for="organization">Organizations</label>
+         </span>
+    </div>
+
+    <div class="col-12" *ngIf="formGroup.get('businessType').value!=='member'">
+      <span class="p-float-label">
+                 <p-multiSelect [options]="businessOptionList"
+                                class="multiselect-filter"
+                                formControlName="businessId"
+                                optionValue="id"
+                                optionLabel="name"
+                                (onPanelHide)="onPanelHide()"
+                                selectedItemsLabel="{0} items selected">
+
+                 </p-multiSelect>
+                    <label *ngIf="formGroup.get('businessType').value==='school'">Schools</label>
+                    <label *ngIf="formGroup.get('businessType').value==='provider'">Providers</label>
+        </span>
+    </div>
+    <div class="col-12" *ngIf="formGroup.get('businessType').value==='member'">
+
+        <span class="p-float-label">
+        <p-multiSelect [options]="businessGroupedMember"
+                       class="multiselect-filter"
+                       formControlName="businessId"
+                       optionValue="value"
+                       [group]="true"
+                       scrollHeight="200px"
+                       selectedItemsLabel="{0} items selected"
+                       (onPanelHide)="onPanelHide()"
+        >
+          <ng-template let-group pTemplate="group">
+            <div class="flex align-items-center">
+              <p class="font-bold text-lg">{{group.label}}</p>
+            </div>
+          </ng-template>
+        </p-multiSelect>
+           <label for="organization">Members</label>
+         </span>
+    </div>
+
+  </div>
+</form>

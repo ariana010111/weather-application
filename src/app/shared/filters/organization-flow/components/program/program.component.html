@@ -1,0 +1,17 @@
+<form [formGroup]="formGroup">
+  <div class="grid">
+    <div class="col-12 mt-1">
+         <span class="p-float-label">
+              <p-multiSelect [options]="programList"
+                             class="multiselect-filter"
+                             formControlName="programId"
+                             id="program"
+                             optionValue="id"
+                             optionLabel="name"
+                             selectedItemsLabel="{0} items selected">
+              </p-multiSelect>
+           <label for="program">Programs</label>
+         </span>
+    </div>
+  </div>
+</form>

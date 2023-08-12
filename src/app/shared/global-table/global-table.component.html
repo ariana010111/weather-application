@@ -1,0 +1,122 @@
+<p-table
+  #dataTable
+  dataKey="id"
+  [rows]="rows"
+  [lazy]="true"
+  [rowHover]="true"
+  [paginator]="true"
+  [scrollable]="true"
+  stateStorage="session"
+  [resizableColumns]="true"
+  columnResizeMode="expand"
+  responsiveLayout="scroll"
+  [columns]="selectedColumns"
+  [loading]="isLoading| async"
+  [showCurrentPageReport]="true"
+  (onLazyLoad)="loadData($event)"
+  [value]="(response$ | async)"
+  [scrollHeight]="'calc(100vh - 345px)'"
+  [responsiveLayout]="'stack'"
+  breakpoint="680px"
+  [rowsPerPageOptions]="[5,10,15,25]"
+  [totalRecords]="totalRecords$ | async"
+  currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
+  <ng-template pTemplate="header" let-columns>
+    <tr class="p-datatable-loading-overlay-override">
+      <ng-container *ngFor="let col of columns">
+        <th pResizableColumn [pSortableColumn]="col.isSortable ? col.field: null">
+          <span>{{col.header}}</span>
+          <p-sortIcon *ngIf="col.isSortable" [field]="col.field"></p-sortIcon>
+        </th>
+      </ng-container>
+      <th *ngIf="isAction">
+        <span>Action</span>
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-response let-columns="columns">
+    <tr>
+      <td *ngFor="let col of columns">
+        <span  *ngIf="!col.isArray">
+          <ng-container *ngIf="col.isDate">
+           {{response[col.field] | date: 'MMM d, y' }}
+          </ng-container>
+          <ng-container *ngIf="col.isCustomPipe">
+            {{response[col.field] | enumTranslator: col.enumTranslatorPipeValue }}
+          </ng-container>
+          <ng-container *ngIf="col.isFullAddress">
+              <app-show-address [address]="response[col.field]"></app-show-address>
+          </ng-container>
+          <ng-container *ngIf="col.isStringTime">
+              {{response[col.field] | stringArrayTimeTranslator: 'en-US'}}
+          </ng-container>
+          <ng-container *ngIf="col.isTime">
+              {{response[col.field] | stringTimeTranslator: 'en-US'}}
+          </ng-container>
+           <ng-container *ngIf="col.isTextOnly">
+              {{response[col.field]}}
+          </ng-container>
+          <ng-container *ngIf="col.isSchedule">
+              {{response[col.field] | scheduleTitleTranslator: 'en-US'}}
+          </ng-container>
+          <ng-container *ngIf="col.isPercentPrice">
+              {{response[col.field] | percentAmountPriceTranslator}}
+          </ng-container>
+        </span>
+        <ul *ngIf="col.isArray">
+          <li
+            *ngFor="let item of response[col.field]">
+            <ng-container *ngIf="col.isDate">
+              <span>
+                {{item | date: 'MMM d, y'}}
+              </span>
+            </ng-container>
+            <ng-container *ngIf="col.isCustomPipe">
+              <span>
+                {{item | enumTranslator: col.enumTranslatorPipeValue }}
+              </span>
+            </ng-container>
+            <ng-container *ngIf="col.isFullAddress">
+              <app-show-address [address]="item"></app-show-address>
+            </ng-container>
+            <ng-container *ngIf="col.isStringTime">
+              {{item | stringArrayTimeTranslator: 'en-US'}}
+            </ng-container>
+            <ng-container *ngIf="col.isTextOnly">
+              <span>
+                {{item}}
+              </span>
+            </ng-container>
+            <ng-container *ngIf="col.isSchedule">
+              <span>
+               {{item| scheduleTitleTranslator: 'en-US'}}
+              </span>
+            </ng-container>
+            <ng-container *ngIf="col.isPercentPrice">
+              <span>
+               {{item| percentAmountPriceTranslator}}
+              </span>
+            </ng-container>
+            <ng-container *ngIf="col.isNestedArray">
+              <ul>
+                <li *ngFor="let nestedItem of item">
+                   <span>
+                    {{nestedItem}}
+                  </span>
+                </li>
+              </ul>
+            </ng-container>
+          </li>
+        </ul>
+      </td>
+      <ng-container *ngTemplateOutlet="template; context: {$implicit: response}"></ng-container>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="emptymessage" let-group>
+    <tr>
+         <span class="p-p-4">
+          No records found
+          </span>
+    </tr>
+  </ng-template>
+</p-table>

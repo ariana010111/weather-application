@@ -1,0 +1,24 @@
+import {Inject, Injectable} from '@angular/core';
+import {DOCUMENT} from '@angular/common';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class ThemeService {
+  constructor(@Inject(DOCUMENT) private document: Document) {
+  }
+
+  switchTheme(theme: string): void {
+    const themeLink = this.document.getElementById('app-theme') as HTMLLinkElement;
+    if (themeLink) {
+      themeLink.href = theme + '.css';
+    }
+  }
+
+  switchLayout(layout: string): void {
+    const layoutLink = this.document.getElementById('app-layout') as HTMLLinkElement;
+    if (layoutLink) {
+      layoutLink.href = layout + '.css';
+    }
+  }
+}

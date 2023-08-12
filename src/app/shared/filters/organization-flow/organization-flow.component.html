@@ -1,0 +1,53 @@
+<form [formGroup]="formGroup">
+  <div class="flex align-items-center justify-content-center mr-2">
+    <div class="group-filters" (click)="OrgOp.toggle($event)">
+      <p class="info-style">Organizations:</p>
+      <div class="info-style font-bold">
+        <span appEllipsis [styleName]="'filtersBox'">
+          {{formGroup.value|orgInfo:isYear}}
+        </span>
+      </div>
+    </div>
+  </div>
+</form>
+<div class="overlaypanel-filter">
+  <p-overlayPanel #OrgOp
+                  [showCloseIcon]="false"
+                  hideTransitionOptions="1s cubic-bezier(.5,-500,.5,500)"
+                  [style]="{width:'200px'}">
+    <ng-template pTemplate="">
+      <div class="w-100 mt-2">
+        <form [formGroup]="formGroup">
+          <app-business *ngIf="levelShow>=0"
+                        formControlName="business">
+          </app-business>
+          <ng-container *ngIf="levelShow>=1">
+            <ng-container *ngIf="isYear">
+              <app-season-type formControlName="seasonType"></app-season-type>
+            </ng-container>
+            <ng-container *ngIf="!isYear">
+              <app-season formControlName="season">
+              </app-season>
+            </ng-container>
+          </ng-container>
+          <app-program *ngIf="levelShow>=2"
+                       formControlName="program"
+                       [yearView]="isYear">
+
+          </app-program>
+          <app-program-schedule *ngIf="levelShow>=3"
+                                formControlName="schedule"
+                                [yearView]="isYear"
+          ></app-program-schedule>
+        </form>
+        <div class="w-100 p-3" *ngIf="levelShow>=1">
+          <p
+            class="cursor-pointer info-color"
+            (click)="switchView()">
+            Switch season view
+          </p>
+        </div>
+      </div>
+    </ng-template>
+  </p-overlayPanel>
+</div>
