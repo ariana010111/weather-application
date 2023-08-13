@@ -25,10 +25,13 @@ import {FormsModule} from "@angular/forms";
         WeatherRoutingModule,
         CorePrimengModule,
         CardModule
+
     ],
   providers: [
+    HttpClientModule,
     WeatherService
-  ]
+  ],
+  exports: [HttpClientModule],
 
 })
 export class WeatherModule { }

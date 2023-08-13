@@ -1,5 +1,5 @@
 <div class="weather-container p-4">
-
+<h1>{{title}}</h1>
   <app-weather-header (searchedCity)="cityChanged($event)"></app-weather-header>
 <div class="divider"></div>
   <ng-container *ngIf="cityWeatherDetail">

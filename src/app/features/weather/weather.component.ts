@@ -10,7 +10,7 @@ import {takeUntilDestroyed} from "@angular/core/rxjs-interop";
   styleUrls: ['./weather.component.scss']
 })
 export class WeatherComponent implements OnInit{
-
+  title = "Weather App using openweather"
   cityWeatherDetail: WeatherResponseModel | undefined;
   tempratureType: string = 'metric';
   destroyRef = inject(DestroyRef);

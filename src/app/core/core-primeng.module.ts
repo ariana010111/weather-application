@@ -3,14 +3,14 @@ import {CommonModule} from '@angular/common';
 import {DropdownModule} from 'primeng/dropdown';
 import {InputTextModule} from 'primeng/inputtext';
 import {TieredMenuModule} from 'primeng/tieredmenu';
-import { MenubarModule } from 'primeng/menubar';
+import {MegaMenuModule} from "primeng/megamenu";
 @NgModule({
   exports: [
     CommonModule,
     DropdownModule,
     InputTextModule,
     TieredMenuModule,
-    MenubarModule
+    MegaMenuModule
   ]
 })
 export class CorePrimengModule {

@@ -8,7 +8,7 @@ export class SentryService implements ErrorHandler{
   private reportedErrorList: Array<string> = [];
   constructor() { }
 
-  handleError(error) {
+  handleError(error: any) {
     if (error && error.name === 'TypeError' && error.message) {
       const uniqueParameter = error.message.split("'")[1].toString();
       if (this.reportedErrorList.indexOf(uniqueParameter) === -1) {
