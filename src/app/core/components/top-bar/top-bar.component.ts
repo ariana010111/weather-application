@@ -20,6 +20,11 @@ items: MegaMenuItem[] | undefined;
         label: 'Weather',
         icon: 'pi pi-fw pi-sun',
         url: '/weather'
+      },
+      {
+        label: 'Setting',
+        icon: 'pi pi-fw pi-cog',
+        url: '/setting'
       }
     ];
   }

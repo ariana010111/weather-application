@@ -1,0 +1,145 @@
+<div class="grid">
+<div class="col-12">
+  <div class="current-weather-container">
+    <h2>{{weatherDetail.name}} in {{weatherDetail.sys.country}} country Current Weather</h2>
+
+    <div class="buttons-container">
+     <button class="p-2">
+       <i class="pi pi-ellipsis-h"></i>
+       <span class="button-label">More details</span>
+     </button>
+   </div>
+
+  </div>
+</div>
+  <div class="col-12 md:col-6 lg:col-6">
+   <div class="temp-container">
+     <p class="weather-desc-main">
+       {{ weatherDetail.weather[0].main }}
+       <span>
+         ({{weatherDetail.weather[0].description}})
+        </span>
+     </p>
+     <img src="http://openweathermap.org/img/w/{{weatherDetail.weather[0].icon}}.png" width="100" height="100px" alt="Weather Icon">
+     <span class="font-value-large">
+        {{ weatherDetail.main.temp }} °C
+      </span>
+   </div>
+  </div>
+
+  <div class="col-12 divider"></div>
+
+  <div class="col-12">
+    <h2>Today overview</h2>
+  </div>
+
+
+  <div class="col-12 md:col-6 lg:col-3">
+    <div class="custom-card p-5">
+      <span class="custom-card__icon">
+        <img src="assets/images/icons/humanity.svg" width="50px" alt="">
+      </span>
+    <span class="card-desc pl-5">
+      <span class="card-desc__label">
+        Humidity:
+      </span>
+       <span class="card-desc__value mt-2"> {{ weatherDetail.main.humidity }} %</span>
+    </span>
+    </div>
+  </div>
+
+  <div class="col-12 md:col-6 lg:col-3">
+    <div class="custom-card p-5">
+      <span class="custom-card__icon">
+        <img src="assets/images/icons/windy_cloudy.svg" width="50px" alt="">
+      </span>
+      <span class="card-desc pl-5">
+      <span class="card-desc__label">
+        Wind Speed:
+      </span>
+       <span class="card-desc__value mt-2"> {{weatherDetail.wind.speed}}</span>
+    </span>
+    </div>
+  </div>
+
+  <div class="col-12 md:col-6 lg:col-3">
+    <div class="custom-card p-5">
+      <span class="custom-card__icon">
+        <img src="assets/images/icons/9772483_weather_air_pressure_forecast_windy_icon.svg" width="50px" alt="">
+      </span>
+      <span class="card-desc pl-5">
+      <span class="card-desc__label">
+        Wind degree:
+      </span>
+       <span class="card-desc__value mt-2">{{weatherDetail.wind.deg}}</span>
+    </span>
+    </div>
+  </div>
+
+  <div class="col-12 md:col-6 lg:col-3">
+    <div class="custom-card p-5">
+      <span class="custom-card__icon">
+        <img src="assets/images/icons/sun.svg" width="50px" alt="">
+      </span>
+      <span class="card-desc pl-5">
+      <span class="card-desc__label">
+        Feels like:
+      </span>
+       <span class="card-desc__value mt-2"> {{weatherDetail.main.feels_like}}</span>
+    </span>
+    </div>
+  </div>
+
+  <div class="col-12 md:col-6 lg:col-3">
+    <div class="custom-card p-5">
+      <span class="custom-card__icon">
+        <img src="assets/images/icons/pressure.svg" width="50px" alt="">
+      </span>
+      <span class="card-desc pl-5">
+      <span class="card-desc__label">
+        Pressure:
+      </span>
+       <span class="card-desc__value mt-2"> {{ weatherDetail.main.pressure }} </span>
+    </span>
+    </div>
+  </div>
+
+  <div class="col-12 divider"></div>
+
+  <div class="col-12">
+    <h2>Sunrise & Sunset</h2>
+  </div>
+
+  <div class="col-12 md:col-6 lg:col-3">
+    <div class="custom-card p-5">
+      <span class="custom-card__icon">
+        <img src="assets/images/icons/sunrise.svg" width="50px" alt="">
+      </span>
+      <span class="card-desc pl-5">
+      <span class="card-desc__label">
+        Sunrise:
+      </span>
+       <span class="card-desc__value mt-2">  {{weatherDetail.sys.sunrise * 1000  | date :'h:mm a'}}</span>
+    </span>
+    </div>
+  </div>
+
+  <div class="col-12 md:col-6 lg:col-3">
+    <div class="custom-card p-5">
+      <span class="custom-card__icon">
+        <img src="assets/images/icons/sunset_icon.svg" width="50px" alt="">
+      </span>
+      <span class="card-desc pl-5">
+      <span class="card-desc__label">
+        Sunset:
+      </span>
+       <span class="card-desc__value mt-2">{{weatherDetail.sys.sunset * 1000 | date :'h:mm a' }}</span>
+    </span>
+    </div>
+  </div>
+
+
+
+
+</div>
+

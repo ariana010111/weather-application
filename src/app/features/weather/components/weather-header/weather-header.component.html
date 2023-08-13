@@ -1,0 +1,34 @@
+
+  <div class="grid weather-header-container">
+    <div class="col-12 md:col-3 lg:col-4">
+      <h2>August 2023</h2>
+      <span>Monday, August 14 2023</span>
+    </div>
+    <div class="col-12 md:col-6 lg:col-4">
+      <div class="weather-header-container__search-container p-2">
+        <input type="text" [(ngModel)]="cityName" placeholder="Search for a city" />
+        <span class="icon" (click)="getCityName(cityName)">
+          <i class="pi pi-search"></i>
+        </span>
+      </div>
+    </div>
+    <div class="col-12 md:col-3 lg:col-4">
+      <div class="buttons-container">
+        <button class="p-2">
+          <i class="pi pi-upload"></i>
+          <span>
+          Share
+        </span>
+        </button>
+        <button class="p-2">
+          <i class="pi pi-heart"></i>
+          <span>
+          Save
+        </span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+

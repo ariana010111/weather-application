@@ -1,0 +1,15 @@
+.current-weather-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.temp-container {
+  display: flex;
+ flex-direction: column;
+.weather-desc-main {
+  text-decoration: underline;
+  font-weight: bold;
+}
+}
+

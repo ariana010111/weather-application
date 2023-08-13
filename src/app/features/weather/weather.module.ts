@@ -6,17 +6,25 @@ import { WeatherComponent } from './weather.component';
 import {CorePrimengModule} from "../../core/core-primeng.module";
 import {WeatherService} from "./services/weather.service";
 import {HttpClientModule} from "@angular/common/http";
+import { CityWeatherDetailComponent } from './components/city-weather-detail/city-weather-detail.component';
+import {CardModule} from "primeng/card";
+import { WeatherHeaderComponent } from './components/weather-header/weather-header.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
   declarations: [
-    WeatherComponent
+    WeatherComponent,
+    CityWeatherDetailComponent,
+    WeatherHeaderComponent
   ],
     imports: [
         CommonModule,
-      HttpClientModule,
+        FormsModule,
+        HttpClientModule,
         WeatherRoutingModule,
-        CorePrimengModule
+        CorePrimengModule,
+        CardModule
     ],
   providers: [
     WeatherService

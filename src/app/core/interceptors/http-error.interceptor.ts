@@ -2,25 +2,32 @@ import { Injectable } from '@angular/core';
 import {
   HttpRequest,
   HttpHandler,
-  HttpInterceptor, HttpHeaders, HttpErrorResponse
+  HttpInterceptor, HttpHeaders, HttpErrorResponse, HttpEvent
 } from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
 import {catchError} from 'rxjs/operators';
-import {INotification} from '@core/models/notification';
-import {StoreService} from '@core/services/store.service';
-import {NotificationService} from '@core/services/app-services/notification/notification.service';
-import {SeverityNotification} from '@core/enums/severity-notification';
-import {SystemMessages} from '@core/enums/system-messages';
+import {NotificationService} from "../services/app-services/notification/notification.service";
+import {StoreService} from "../services/store.service";
+import {INotification} from "../models/notification";
+import {SeverityNotification} from "../enums/severity-notification";
+import {SystemMessages} from "../enums/system-messages";
+
 
 @Injectable()
 export class HttpErrorInterceptor implements HttpInterceptor {
-
+  private errorMessageMap: Record<number, string> = {
+    400: 'bad-request',
+    401: 'unauthorized',
+    403: 'forbidden',
+    404: 'not-found',
+    500: 'internal-server-error'
+  };
   constructor(
     private notificationService: NotificationService,
     private storeService: StoreService
   ) {}
 
-  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<any> {
+  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     return next
       .handle(this.addToken(request, this.storeService.getAccessToken()))
       .pipe(

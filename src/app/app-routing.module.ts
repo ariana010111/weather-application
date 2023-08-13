@@ -12,6 +12,13 @@ const routes: Routes = [
          import('./features/weather/weather.module').then(
            (m) => m.WeatherModule
          ),
+     },
+     {
+       path: 'setting',
+       loadChildren: () =>
+         import('./features/setting/setting.module').then(
+           (m) => m.SettingModule
+         )
      }
    ]
   },

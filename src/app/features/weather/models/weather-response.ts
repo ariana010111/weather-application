@@ -1,4 +1,4 @@
-export interface WeatherResponse {
+export interface WeatherResponseModel {
   coord: Coord
   weather: Weather[]
   base: string

@@ -1,22 +1,8 @@
 <div class="weather-container p-4">
-  <div class="grid">
-    <div class="col-12">
-      <input type="text" pInputText placeholder="Search for a city" />
-    </div>
-  </div>
-  <div class="grid">
-    <div class="p-col-12 p-lg-4 p-xl-3 p-p-3">
-      <h2>{{cityWeatherDetail.name}} Current Weather</h2>
-      <img src="http://openweathermap.org/img/w/{{currenWeather.icon}}.png" alt="Weather Icon">
-      <p>Temperature: {{ cityWeatherDetail.main.temp }} °C</p>
-      <p>Humidity: {{ cityWeatherDetail.main.humidity }} %</p>
-      <p>Weather Condition:
-        {{ currenWeather.main }}
-        <span>
-         ({{currenWeather.description}})
-        </span>
-      </p>
-<!--      <p>Wind Speed: {{cityWeatherDetail.wind.speed}} - Wind degree:  {{cityWeatherDetail.wind.deg}}</p>-->
-    </div>
-  </div>
+
+  <app-weather-header (searchedCity)="cityChanged($event)"></app-weather-header>
+<div class="divider"></div>
+  <ng-container *ngIf="cityWeatherDetail">
+      <app-city-weather-detail [weatherDetail]="cityWeatherDetail"></app-city-weather-detail>
+  </ng-container>
 </div>
