@@ -3,9 +3,6 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 import * as Sentry from "@sentry/angular-ivy";
 
-import {
-  platformBrowserDynamic
-} from "@angular/platform-browser-dynamic";
 import {enableProdMode} from "@angular/core";
 Sentry.init({
   dsn: "https://1cde1a89605e15edc091a49a61f7ab84@o4505699474472960.ingest.sentry.io/4505699477291008",
