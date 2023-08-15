@@ -1,12 +1,12 @@
-
+<ng-container *transloco="let t">
   <div class="grid weather-header-container">
     <div class="col-12 md:col-3 lg:col-4">
       <h2>August 2023</h2>
-      <span>Monday, August 14 2023</span>
+      <span>Tuesday, August 15 2023</span>
     </div>
     <div class="col-12 md:col-6 lg:col-4">
       <div class="weather-header-container__search-container p-2">
-        <input type="text" [(ngModel)]="cityName" placeholder="Search for a city" />
+        <input type="text" [(ngModel)]="cityName" [placeholder]=" 'bundleID_literal_search_placeholder' | transloco" />
         <span class="icon" (click)="getCityName(cityName)">
           <i class="pi pi-search"></i>
         </span>
@@ -17,13 +17,14 @@
         <button class="p-2">
           <i class="pi pi-upload"></i>
           <span>
-          Share
+            {{t('bundleID_literal_share')}}
+
         </span>
         </button>
         <button class="p-2">
           <i class="pi pi-heart"></i>
           <span>
-          Save
+          {{t('bundleID_literal_save')}}
         </span>
         </button>
       </div>
@@ -31,4 +32,4 @@
     </div>
   </div>
 
-
+</ng-container>

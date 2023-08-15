@@ -7,6 +7,9 @@ import {StoreModule} from "@ngrx/store";
 import { reducers, metaReducers } from './reducers';
 import {CoreModule} from "./core/core.module";
 import * as Sentry from "@sentry/angular-ivy";
+import { HttpClientModule } from '@angular/common/http';
+import { TranslocoRootModule } from './transloco-root.module';
+
 
 
 @NgModule({
@@ -18,9 +21,12 @@ import * as Sentry from "@sentry/angular-ivy";
     AppRoutingModule,
     RouterModule,
     CoreModule,
+
     StoreModule.forRoot(reducers, {
       metaReducers
-    })
+    }),
+     HttpClientModule,
+     TranslocoRootModule
   ],
   providers: [{
     provide: ErrorHandler,

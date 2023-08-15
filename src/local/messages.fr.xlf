@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Loco xml export: XLIFF for Angular
+ Project: weather-project
+ Release: Working copy
+ Locale: fr-FR, French (France)
+ Exported by: Samira Soltani
+ Exported at: Mon, 14 Aug 2023 12:04:43 +0300
+-->
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="ng.template" source-language="en-US" target-language="fr-FR" datatype="plaintext" tool-id="loco">
+    <header>
+      <tool tool-id="loco" tool-name="Loco for Angular" tool-version="1.0.28 20230809-1" tool-company="Loco"/>
+    </header>
+    <body>
+      <trans-unit id="bundleID_literal_home" datatype="html">
+        <source>Home</source>
+        <target>Maison</target>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_weather" datatype="html">
+        <source>Weather</source>
+        <target>la tempête</target>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_setting" datatype="html">
+        <source>Setting</source>
+        <target>Paramètre</target>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_weather_title" datatype="html">
+        <source>Weather App using openweather</source>
+        <target>Application météo utilisant openweather</target>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_share" datatype="html">
+        <source>share</source>
+        <target>partager</target>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_save" datatype="html">
+        <source>save</source>
+        <target>sauver</target>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_weather-current" datatype="html">
+        <source>country current weather</source>
+        <target>Météo actuelle du pays</target>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_more_details" datatype="html">
+        <source>More details</source>
+        <target>Plus de détails</target>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_weather_today_overview" datatype="html">
+        <source>Today overview</source>
+        <target>Aperçu d'aujourd'hui</target>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_weather_humidity" datatype="html">
+        <source>Humidity</source>
+        <target>Humidité</target>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_weather_wind_speed" datatype="html">
+        <source>Wind speed</source>
+        <target>Vitesse du vent</target>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_weather_wind_degree" datatype="html">
+        <source>Wind degree</source>
+        <target>Degré de vent</target>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_weather_feels_like" datatype="html">
+        <source>Feels like</source>
+        <target>Se sent comme</target>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_weather_pressure" datatype="html">
+        <source>Pressure</source>
+        <target>Pression</target>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_weather_sunrise" datatype="html">
+        <source>Sunrise</source>
+        <target>Lever du soleil</target>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_weather_sunset" datatype="html">
+        <source>Sunset</source>
+        <target>Coucher de soleil</target>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_weather_sunrise_sunset" datatype="html">
+        <source>Sunrise &amp; Sunset</source>
+        <target>Lever &amp; coucher du soleil</target>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_setting_change_language" datatype="html">
+        <source>Change language</source>
+        <target>Changer de langue</target>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_setting_english" datatype="html">
+        <source>English</source>
+        <target>Anglaise</target>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_setting_french" datatype="html">
+        <source>French</source>
+        <target>Français</target>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_search_placeholder" datatype="html">
+        <source>Search for a city</source>
+        <target>Rechercher une ville</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

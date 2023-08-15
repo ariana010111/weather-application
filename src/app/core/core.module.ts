@@ -13,6 +13,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import {MenubarModule} from "primeng/menubar";
 import {MegaMenuModule} from "primeng/megamenu";
 import {HttpClient} from "@angular/common/http";
+import {SourceStorageService} from "./services/source-storage.service";
 
 ;
 
@@ -31,7 +32,7 @@ import {HttpClient} from "@angular/common/http";
   ],
   providers: [
     {provide: 'BASE_API_URL',
-    useValue: environment.baseUrl}
+    useValue: environment.baseUrl},
   ],
   declarations: [
     TopBarComponent,

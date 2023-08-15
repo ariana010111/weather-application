@@ -33,7 +33,6 @@ export class WeatherComponent implements OnInit{
   }
 
   cityChanged(event: string) {
-    console.log('hal', event);
     this.fetchData(event);
   }
 }

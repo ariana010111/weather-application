@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Loco xml export: XLIFF for Angular
+ Project: weather-project
+ Release: Working copy
+ Locale: en-US, English (USA)
+ Exported by: Samira Soltani
+ Exported at: Mon, 14 Aug 2023 12:04:32 +0300
+-->
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="ng.template" source-language="en-US" datatype="plaintext" tool-id="loco">
+    <header>
+      <tool tool-id="loco" tool-name="Loco for Angular" tool-version="1.0.28 20230809-1" tool-company="Loco"/>
+    </header>
+    <body>
+      <trans-unit id="bundleID_literal_home" datatype="html">
+        <source>Home</source>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_weather" datatype="html">
+        <source>Weather</source>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_setting" datatype="html">
+        <source>Setting</source>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_weather_title" datatype="html">
+        <source>Weather App using openweather</source>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_share" datatype="html">
+        <source>share</source>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_save" datatype="html">
+        <source>save</source>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_weather-current" datatype="html">
+        <source>country current weather</source>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_more_details" datatype="html">
+        <source>More details</source>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_weather_today_overview" datatype="html">
+        <source>Today overview</source>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_weather_humidity" datatype="html">
+        <source>Humidity</source>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_weather_wind_speed" datatype="html">
+        <source>Wind speed</source>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_weather_wind_degree" datatype="html">
+        <source>Wind degree</source>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_weather_feels_like" datatype="html">
+        <source>Feels like</source>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_weather_pressure" datatype="html">
+        <source>Pressure</source>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_weather_sunrise" datatype="html">
+        <source>Sunrise</source>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_weather_sunset" datatype="html">
+        <source>Sunset</source>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_weather_sunrise_sunset" datatype="html">
+        <source>Sunrise &amp; Sunset</source>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_setting_change_language" datatype="html">
+        <source>Change language</source>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_setting_english" datatype="html">
+        <source>English</source>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_setting_french" datatype="html">
+        <source>French</source>
+      </trans-unit>
+      <trans-unit id="bundleID_literal_search_placeholder" datatype="html">
+        <source>Search for a city</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

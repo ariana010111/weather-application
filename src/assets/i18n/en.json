@@ -1,0 +1,23 @@
+{
+    "bundleID_literal_home": "Home",
+    "bundleID_literal_weather": "Weather",
+    "bundleID_literal_setting": "Setting",
+    "bundleID_literal_weather_title": "Weather App using openweather",
+    "bundleID_literal_share": "share",
+    "bundleID_literal_save": "save",
+    "bundleID_literal_weather-current": "country current weather",
+    "bundleID_literal_more_details": "More details",
+    "bundleID_literal_weather_today_overview": "Today overview",
+    "bundleID_literal_weather_humidity": "Humidity",
+    "bundleID_literal_weather_wind_speed": "Wind speed",
+    "bundleID_literal_weather_wind_degree": "Wind degree",
+    "bundleID_literal_weather_feels_like": "Feels like",
+    "bundleID_literal_weather_pressure": "Pressure",
+    "bundleID_literal_weather_sunrise": "Sunrise",
+    "bundleID_literal_weather_sunset": "Sunset",
+    "bundleID_literal_weather_sunrise_sunset": "Sunrise & Sunset",
+    "bundleID_literal_setting_change_language": "Change language",
+    "bundleID_literal_setting_english": "English",
+    "bundleID_literal_setting_french": "French",
+    "bundleID_literal_search_placeholder": "Search for a city"
+}

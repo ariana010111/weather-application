@@ -1,1 +1,7 @@
-<p>setting works!</p>
+<p>{{'bundleID_literal_setting' | transloco}}</p>
+<div class="card flex justify-content-center">
+  <p-dropdown
+    [options]="languages"
+    [placeholder]="'bundleID_literal_search' | transloco"
+    (onChange)="onLangChange($event)"></p-dropdown>
+</div>

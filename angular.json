@@ -13,10 +13,20 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": {
+          "code": "en",
+          "baseHref": "./"
+        },
+        "locales": {
+          "fr": "src/local/messages.fr.xlf"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": true,
             "outputPath": "dist/weather-ng-app",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -59,6 +69,12 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "en": {
+              "localize": ["en"]
+            },
+            "fr": {
+              "localize": ["fr"]
             }
           },
           "defaultConfiguration": "production"
@@ -70,7 +86,10 @@
               "browserTarget": "weather-ng-app:build:production"
             },
             "development": {
-              "browserTarget": "weather-ng-app:build:development"
+              "browserTarget": "weather-ng-app:build:development,en"
+            },
+            "fr": {
+              "browserTarget": "weather-ng-app:build:development,fr"
             }
           },
           "defaultConfiguration": "development"

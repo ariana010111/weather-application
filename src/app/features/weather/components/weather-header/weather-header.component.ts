@@ -6,7 +6,7 @@ import {Component, EventEmitter, Output} from '@angular/core';
   styleUrls: ['./weather-header.component.scss']
 })
 export class WeatherHeaderComponent {
-  cityName: string = ' ';
+  cityName: string= '';
   @Output() searchedCity = new EventEmitter<string>();
   getCityName(cityName: string) {
     console.log(cityName);

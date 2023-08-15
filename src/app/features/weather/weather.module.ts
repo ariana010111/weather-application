@@ -10,6 +10,7 @@ import { CityWeatherDetailComponent } from './components/city-weather-detail/cit
 import {CardModule} from "primeng/card";
 import { WeatherHeaderComponent } from './components/weather-header/weather-header.component';
 import {FormsModule} from "@angular/forms";
+import {TranslocoRootModule} from "../../transloco-root.module";
 
 
 @NgModule({
@@ -18,15 +19,16 @@ import {FormsModule} from "@angular/forms";
     CityWeatherDetailComponent,
     WeatherHeaderComponent
   ],
-    imports: [
-        CommonModule,
-        FormsModule,
-        HttpClientModule,
-        WeatherRoutingModule,
-        CorePrimengModule,
-        CardModule
+  imports: [
+    CommonModule,
+    FormsModule,
+    HttpClientModule,
+    WeatherRoutingModule,
+    CorePrimengModule,
+    CardModule,
+    TranslocoRootModule
 
-    ],
+  ],
   providers: [
     HttpClientModule,
     WeatherService

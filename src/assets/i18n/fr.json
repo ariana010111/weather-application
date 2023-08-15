@@ -1,0 +1,23 @@
+{
+    "bundleID_literal_home": "Maison",
+    "bundleID_literal_weather": "la tempête",
+    "bundleID_literal_setting": "Paramètre",
+    "bundleID_literal_weather_title": "Application météo utilisant openweather",
+    "bundleID_literal_share": "partager",
+    "bundleID_literal_save": "sauver",
+    "bundleID_literal_weather-current": "Météo actuelle du pays",
+    "bundleID_literal_more_details": "Plus de détails",
+    "bundleID_literal_weather_today_overview": "Aperçu d'aujourd'hui",
+    "bundleID_literal_weather_humidity": "Humidité",
+    "bundleID_literal_weather_wind_speed": "Vitesse du vent",
+    "bundleID_literal_weather_wind_degree": "Degré de vent",
+    "bundleID_literal_weather_feels_like": "Se sent comme",
+    "bundleID_literal_weather_pressure": "Pression",
+    "bundleID_literal_weather_sunrise": "Lever du soleil",
+    "bundleID_literal_weather_sunset": "Coucher de soleil",
+    "bundleID_literal_weather_sunrise_sunset": "Lever & coucher du soleil",
+    "bundleID_literal_setting_change_language": "Changer de langue",
+    "bundleID_literal_setting_english": "Anglaise",
+    "bundleID_literal_setting_french": "Français",
+    "bundleID_literal_search_placeholder": "Rechercher une ville"
+}

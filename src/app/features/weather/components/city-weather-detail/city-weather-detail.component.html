@@ -1,12 +1,13 @@
+<ng-container *transloco="let t">
 <div class="grid">
 <div class="col-12">
   <div class="current-weather-container">
-    <h2>{{weatherDetail.name}} in {{weatherDetail.sys.country}} country Current Weather</h2>
+    <h2>{{weatherDetail.name}} in {{weatherDetail.sys.country}} {{t('bundleID_literal_weather-current') }}</h2>
 
     <div class="buttons-container">
      <button class="p-2">
        <i class="pi pi-ellipsis-h"></i>
-       <span class="button-label">More details</span>
+       <span class="button-label">{{t('bundleID_literal_more_details')}}</span>
      </button>
    </div>
 
@@ -30,7 +31,7 @@
   <div class="col-12 divider"></div>
 
   <div class="col-12">
-    <h2>Today overview</h2>
+    <h2>{{t('bundleID_literal_weather_today_overview')}}</h2>
   </div>
 
 
@@ -41,7 +42,7 @@
       </span>
     <span class="card-desc pl-5">
       <span class="card-desc__label">
-        Humidity:
+        {{t('bundleID_literal_weather_humidity')}}
       </span>
        <span class="card-desc__value mt-2"> {{ weatherDetail.main.humidity }} %</span>
     </span>
@@ -55,7 +56,7 @@
       </span>
       <span class="card-desc pl-5">
       <span class="card-desc__label">
-        Wind Speed:
+        {{t('bundleID_literal_weather_wind_speed')}}
       </span>
        <span class="card-desc__value mt-2"> {{weatherDetail.wind.speed}}</span>
     </span>
@@ -69,7 +70,7 @@
       </span>
       <span class="card-desc pl-5">
       <span class="card-desc__label">
-        Wind degree:
+        {{t('bundleID_literal_weather_wind_degree')}}
       </span>
        <span class="card-desc__value mt-2">{{weatherDetail.wind.deg}}</span>
     </span>
@@ -83,7 +84,7 @@
       </span>
       <span class="card-desc pl-5">
       <span class="card-desc__label">
-        Feels like:
+        {{t('bundleID_literal_weather_feels_like')}}
       </span>
        <span class="card-desc__value mt-2"> {{weatherDetail.main.feels_like}}</span>
     </span>
@@ -97,7 +98,7 @@
       </span>
       <span class="card-desc pl-5">
       <span class="card-desc__label">
-        Pressure:
+        {{t('bundleID_literal_weather_pressure')}}
       </span>
        <span class="card-desc__value mt-2"> {{ weatherDetail.main.pressure }} </span>
     </span>
@@ -107,7 +108,7 @@
   <div class="col-12 divider"></div>
 
   <div class="col-12">
-    <h2>Sunrise & Sunset</h2>
+    <h2>{{t('bundleID_literal_weather_sunrise_sunset')}}</h2>
   </div>
 
   <div class="col-12 md:col-6 lg:col-3">
@@ -117,7 +118,7 @@
       </span>
       <span class="card-desc pl-5">
       <span class="card-desc__label">
-        Sunrise:
+        {{t('bundleID_literal_weather_sunrise')}}
       </span>
        <span class="card-desc__value mt-2">  {{weatherDetail.sys.sunrise * 1000  | date :'h:mm a'}}</span>
     </span>
@@ -131,7 +132,7 @@
       </span>
       <span class="card-desc pl-5">
       <span class="card-desc__label">
-        Sunset:
+       {{t('bundleID_literal_weather_sunset')}}
       </span>
        <span class="card-desc__value mt-2">{{weatherDetail.sys.sunset * 1000 | date :'h:mm a' }}</span>
     </span>
@@ -142,4 +143,4 @@
 
 
 </div>
-
+</ng-container>
