@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   title = 'weather-ng-app';
 
   constructor(private primengConfig: PrimeNGConfig,
+
              ) {}
 
   ngOnInit(): void {
