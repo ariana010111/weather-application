@@ -12,7 +12,7 @@ import {TranslocoService} from "@ngneat/transloco";
 })
 export class SettingComponent implements OnInit {
   languages: Language[] = [];
-  label?: string;
+  label: string ='';
   selectedLanguage: Language = { label: '', value: '' };
   constructor(private langService: LanguageService,
              ) {
@@ -21,6 +21,7 @@ export class SettingComponent implements OnInit {
   ngOnInit(): void {
 
     this.languages = [
+      { label: 'Select language', value: 'en' },
       {label: 'English', value: 'en'},
       {label: 'French', value: 'fr'},
     ]
@@ -28,6 +29,7 @@ export class SettingComponent implements OnInit {
   }
 
   onLangChange(event: any) {
+
     this.selectedLanguage = event.value;
     this.label = event.value.label;
     this.langService.onLangChange(event.value.value);
